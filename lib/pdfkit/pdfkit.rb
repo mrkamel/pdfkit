@@ -44,7 +44,7 @@ class PDFKit
     input_for_command = @source.to_input_for_command
     output_for_command = path ? Shellwords.shellescape(path) : '-'
 
-    "#{shell_escaped_command} #{input_for_command} #{output_for_command}"
+    "#{shell_escaped_command} #{input_for_command} #{output_for_command} 2>/dev/null"
   end
 
   def options
